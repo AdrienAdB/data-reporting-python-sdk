@@ -6,8 +6,7 @@
 ## Installation
 
 - install Python3
-- git clone https://gitlab.acte.solutions/adrien/data-reporting-python-sdk.git
-- pip3 install -r requirements.txt
+- pip3 install git+https://gitlab.acte.solutions/acte-public/data-reporting-python-sdk
 
 
 # Configuration
@@ -19,7 +18,7 @@
 
 ```python
 
-from data_reporting_python_sdk import report_api
+from acte_data_report_sdk import ReportApi
 from pprint import pprint
 from datetime import datetime, timedelta
 
@@ -30,9 +29,8 @@ BASE_URL = "https://gw7.acte.ltd"
 db = "DATA_DB" # database
 
 
-
 # init api class and connect
-api = report_api.ReportApi(BASE_URL)
+api = ReportApi(BASE_URL)
 api.connect(API_USERNAME, API_PASSWORD)
 
 # get allowed databases
