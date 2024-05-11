@@ -1,2 +1,0 @@
-requests
-git+@https://gitlab.acte.solutions/adrien/data-reporting-python-sdk
