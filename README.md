@@ -40,9 +40,9 @@ pprint(databases)
 # get devices
 devices = api.getDevices(db)
 pprint(devices)
-device = devices[0] # first device
+device = devices[0] # pick up first device from the list
 
-# get keys
+# get keys from device
 keys = api.getKeys(db, device)
 pprint(keys)
 
@@ -51,9 +51,9 @@ pprint(keys)
 #    prepare configuration parameters
 to_ts = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
 from_ts = ( datetime.now() - timedelta(days=7) ).replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
-key = keys[0] # first key
+key = keys[0] # pick up first key from the list
 agg_type = "SUM" # or "AVG" for average
-agg_interval = 3600 # 1day
+agg_interval = 3600 # in seconds
 
 data = api.getTelemetry(db, device, key, from_ts, to_ts, agg_interval=agg_interval, agg_type=agg_type)
 pprint(data)
