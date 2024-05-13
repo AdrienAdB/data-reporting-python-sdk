@@ -18,19 +18,19 @@
 
 ```python
 
-from acte_data_report_sdk import ReportApi
+from acte_data_report_sdk import acte_data_report_sdk
 from pprint import pprint
 from datetime import datetime, timedelta
 
 # Configuration variables
 API_USERNAME = "YOUR_USERNAME"
 API_PASSWORD = "YOUR_PASSWORD"
-BASE_URL = "https://gw7.acte.ltd"
+BASE_URL = "https://XXX.acte.ltd"
 db = "DATA_DB" # database
 
 
 # init api class and connect
-api = ReportApi(BASE_URL)
+api = acte_data_report_sdk.ReportApi(BASE_URL)
 api.connect(API_USERNAME, API_PASSWORD)
 
 # get allowed databases
