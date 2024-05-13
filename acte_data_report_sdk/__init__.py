@@ -1,1 +1,1 @@
-from . import acte_data_report_sdk
+from acte_data_report_sdk import *
