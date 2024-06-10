@@ -6,7 +6,7 @@
 ## Installation
 
 - install Python3
-- pip3 install git+https://gitlab.acte.solutions/acte-public/data-reporting-python-sdk
+- pip3 install git+https://github.com/acte-technology/data-reporting-python-sdk
 
 
 # Configuration
